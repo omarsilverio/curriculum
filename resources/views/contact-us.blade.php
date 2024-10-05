@@ -1,68 +1,43 @@
 <x-app-layout>
     <x-title>
-        <img class="d-block mx-auto mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
-        <h1 class="fw-bolder">Conctac Us</h1>
-        <p class="lead mb-0">Below is an example form built entirely with Bootstrap's form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
+    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3">
+        <i class="bi bi-envelope"></i></div>
+        <h1 class="fw-bolder">Get in touch</h1>
+        <p class="lead fw-normal text-muted mb-0">We'd love to hear from you</p>
     </x-title>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-9">
-                <h4 class="mb-3">Billing address</h4>
-                @include('forms.form-contact-us')
-            </div>                
-            <div class="col-md-3">
-                <div class="row">
-                    <h4 class="d-flex justify-content-between align-items-center mb-3">
-                        <span class="text-muted">Your cart</span>
-                        <span class="badge badge-secondary badge-pill">3</span>
-                    </h4>
-                    <ul class="list-group mb-3">
-                        <li class="list-group-item d-flex justify-content-between lh-condensed">
-                        <div>
-                            <h6 class="my-0">Product name</h6>
-                            <small class="text-muted">Brief description</small>
+    <section class="py-5">
+                <div class="container px-5">
+                    <!-- Contact form-->
+                    <div class="rounded-3">
+                        <div class="row gx-5 justify-content-center">
+                            <div class="col-lg-8 col-xl-6">
+                                @include('forms.form-contact-us')
+                            </div>
                         </div>
-                        <span class="text-muted">$12</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between lh-condensed">
-                        <div>
-                            <h6 class="my-0">Second product</h6>
-                            <small class="text-muted">Brief description</small>
+                    </div>
+                    <!-- Contact cards-->
+                    <div class="row gx-5 row-cols-2 row-cols-lg-4 py-5">
+                        <div class="col">
+                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-chat-dots"></i></div>
+                            <div class="h5 mb-2">Chat with us</div>
+                            <p class="text-muted mb-0">Chat live with one of our support specialists.</p>
                         </div>
-                        <span class="text-muted">$8</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between lh-condensed">
-                        <div>
-                            <h6 class="my-0">Third item</h6>
-                            <small class="text-muted">Brief description</small>
+                        <div class="col">
+                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-people"></i></div>
+                            <div class="h5">Ask the community</div>
+                            <p class="text-muted mb-0">Explore our community forums and communicate with other users.</p>
                         </div>
-                        <span class="text-muted">$5</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between bg-light">
-                        <div class="text-success">
-                            <h6 class="my-0">Promo code</h6>
-                            <small>EXAMPLECODE</small>
+                        <div class="col">
+                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-question-circle"></i></div>
+                            <div class="h5">Support center</div>
+                            <p class="text-muted mb-0">Browse FAQ's and support articles to find solutions.</p>
                         </div>
-                        <span class="text-success">-$5</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between">
-                        <span>Total (USD)</span>
-                        <strong>$20</strong>
-                        </li>
-                    </ul>
+                        <div class="col">
+                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-telephone"></i></div>
+                            <div class="h5">Call us</div>
+                            <p class="text-muted mb-0">Call us during normal business hours at (555) 892-9403.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="row">
-                    <form class="card p-2">
-                        <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Promo code">
-                        <div class="input-group-append">
-                            <button type="submit" class="btn btn-secondary">Redeem</button>
-                        </div>
-                        </div>
-                    </form>
-                </div>                
-            </div>            
-        </div>
-    </div>
+            </section>
 </x-app-layout>
