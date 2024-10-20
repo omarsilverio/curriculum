@@ -1,16 +1,49 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Resources\ServicesResource;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
 Route::get('/', function () {
-    return Inertia::render('Index', [
+    return Inertia::render('Index');
+})->name('index');
+
+Route::get('/portfolio', function () {
+    return Inertia::render('Portfolio', [
         'canLogin' => Route::has('login'),
         'canRegister' => Route::has('register'),
     ]);
-});
+})->name('portfolio');
+
+Route::get('/blog', function () {
+    return Inertia::render('Blog', [
+        'canLogin' => Route::has('login'),
+        'canRegister' => Route::has('register'),
+    ]);
+})->name('blog');
+
+Route::get('/contact-us', function () {
+    return Inertia::render('ContactUs', [
+        'canLogin' => Route::has('login'),
+        'canRegister' => Route::has('register'),
+    ]);
+})->name('contact-us');
+
+Route::get('/about-us', function () {
+    return Inertia::render('AboutUs', [
+        'canLogin' => Route::has('login'),
+        'canRegister' => Route::has('register'),
+    ]);
+})->name('about-us');
+
+Route::get('/curriculum', function () {
+    return Inertia::render('CV', [
+        'canLogin' => Route::has('login'),
+        'canRegister' => Route::has('register'),
+    ]);
+})->name('curriculum');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');

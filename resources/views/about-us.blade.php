@@ -10,11 +10,6 @@
 @endphp
 <x-app-layout>
     <x-title>
-        <!--<h2 class="fw-bolder"> ¿Necesitas implementar nuevas funciones a tu proyecto de software?</h2>
-        <h2 class="fw-bolder"> ¿Necesitas un proyecto de software? </h2>
-        <h2 class="fw-bolder"> ¿Necesitas colaboración en algun proyecto de desarrollo de software? </h2>
-        <h2 class="fw-bolder"> ¿Algo no esta funcionando correctamente en tu aplicación? </h2>
-        <h2 class="fw-bolder"> ¿Necesitas un administrador de tu sitio web? </h2>-->
         <p class="lead mb-0">
             Soy un desarrollador de software con un enfoque por crear soluciones eficientes y  funcionales . Mi experiencia abarca una amplia gama de actividades  que me permiten 
             <b> contribuir de manera integral en proyectos de desarrollo de software</b>. Mis principales habilidades incluyen:
@@ -35,21 +30,21 @@
                 <p class="lead fw-normal text-muted mb-5">Dedicated to quality and your success</p>
             </div>
             <div class="row gx-5 row-cols-1 row-cols-sm-2 row-cols-xl-4 justify-content-center">
-                <div class="col mb-5 mb-5 mb-xl-0">
+                <div class="col mb-5 mb-xl-0">
                     <div class="text-center">
                         <img class="img-fluid rounded-circle mb-4 px-4" src="https://dummyimage.com/150x150/ced4da/6c757d" alt="..." />
                         <h5 class="fw-bolder">Ibbie Eckart</h5>
                         <div class="fst-italic text-muted">Founder &amp; CEO</div>
                     </div>
                 </div>
-                <div class="col mb-5 mb-5 mb-xl-0">
+                <div class="col mb-5 mb-xl-0">
                     <div class="text-center">
                         <img class="img-fluid rounded-circle mb-4 px-4" src="https://dummyimage.com/150x150/ced4da/6c757d" alt="..." />
                         <h5 class="fw-bolder">Arden Vasek</h5>
                         <div class="fst-italic text-muted">CFO</div>
                     </div>
                 </div>
-                <div class="col mb-5 mb-5 mb-sm-0">
+                <div class="col mb-5 mb-sm-0">
                     <div class="text-center">
                         <img class="img-fluid rounded-circle mb-4 px-4" src="https://dummyimage.com/150x150/ced4da/6c757d" alt="..." />
                         <h5 class="fw-bolder">Toribio Nerthus</h5>
