@@ -1,7 +1,12 @@
 import Habilities from '@/Components/Habilities';
+import ParticipantTeam from '@/Components/ParticipantTeam';
+import TitlePage from '@/Components/TitlePage';
 import PageLayout from '@/Layouts/PageLayout';
+import { Col, Container, Row } from 'react-bootstrap';
 
-
+/**
+ * 
+ */
 const habilities = [
     {
         title: 'Desarrollo de Sistemas y Aplicaciones',
@@ -35,59 +40,57 @@ const habilities = [
     }
 ];
 
-let items = habilities.map(function(item,index) {
+/**
+ * 
+ */
+const items = habilities.map(function(item,index) {
     return <Habilities key={index} className={((index % 2) == 0) ? "order-first" : "order-lg-last"} image={item.image} title={item.title} text={item.text}/>;
   });
 
+  /**
+   * 
+   */
+const team = [
+    {name:'Ibbie Eckart', jobPositicion:'Founder & CEO', image: 'https://dummyimage.com/150x150/ced4da/6c757d'},
+    {name:'Arden Vasek', jobPositicion:'CEO', image: 'https://dummyimage.com/150x150/ced4da/6c757d'},
+    {name:'Toribio Nerthus', jobPositicion:'Operations Manager', image: 'https://dummyimage.com/150x150/ced4da/6c757d'},
+    {name:'Malvina Cilla', jobPositicion:'CTO', image: 'https://dummyimage.com/150x150/ced4da/6c757d'}
+];
+
+/**
+ * 
+ */
+const componentsTeam = team.map( item => {
+    return  <Col className="mb-5" key = { item.name } >
+                <ParticipantTeam name={ item.name } jobPositicion={ item.jobPositicion} image={ item.image }/>
+            </Col>
+} );
+
+/*
+* 
+* @param
+* @returns 
+*/
 export default function AboutUs({ auth }) {
     return (
         <>
             <PageLayout title_page="About Us">
                 <PageLayout.Title>
-                    <p className="lead mb-0">
-                        Soy un desarrollador de software con un enfoque por crear soluciones eficientes y  funcionales . Mi experiencia abarca una amplia gama de actividades  que me permiten 
-                        <b> contribuir de manera integral en proyectos de desarrollo de software</b>. Mis principales habilidades incluyen:
-                    </p>
+                    <TitlePage title={'About Me'} description={ ' Soy un desarrollador de software con un enfoque por crear soluciones eficientes y  funcionales . Mi experiencia abarca una amplia gama de actividades  que me permiten contribuir de manera integral en proyectos de desarrollo de software. Mis principales habilidades incluyen:' }/>
                 </PageLayout.Title>
+                
                 <PageLayout.Content>
                     { items }
                     <section className="py-5">
-                        <div className="container px-5 my-5">
+                        <Container className=" px-5 my-5">
                             <div className="text-center">
                                 <h2 className="fw-bolder">Our team</h2>
                                 <p className="lead fw-normal text-muted mb-5">Dedicated to quality and your success</p>
                             </div>
-                            <div className="row gx-5 row-cols-1 row-cols-sm-2 row-cols-xl-4 justify-content-center">
-                                <div className="col mb-5 mb-xl-0">
-                                    <div className="text-center">
-                                        <img className="img-fluid rounded-circle mb-4 px-4" src="https://dummyimage.com/150x150/ced4da/6c757d" alt="..." />
-                                        <h5 className="fw-bolder">Ibbie Eckart</h5>
-                                        <div className="fst-italic text-muted">Founder &amp; CEO</div>
-                                    </div>
-                                </div>
-                                <div className="col mb-5 mb-xl-0">
-                                    <div className="text-center">
-                                        <img className="img-fluid rounded-circle mb-4 px-4" src="https://dummyimage.com/150x150/ced4da/6c757d" alt="..." />
-                                        <h5 className="fw-bolder">Arden Vasek</h5>
-                                        <div className="fst-italic text-muted">CFO</div>
-                                    </div>
-                                </div>
-                                <div className="col mb-5 mb-sm-0">
-                                    <div className="text-center">
-                                        <img className="img-fluid rounded-circle mb-4 px-4" src="https://dummyimage.com/150x150/ced4da/6c757d" alt="..." />
-                                        <h5 className="fw-bolder">Toribio Nerthus</h5>
-                                        <div className="fst-italic text-muted">Operations Manager</div>
-                                    </div>
-                                </div>
-                                <div className="col mb-5">
-                                    <div className="text-center">
-                                        <img className="img-fluid rounded-circle mb-4 px-4" src="https://dummyimage.com/150x150/ced4da/6c757d" alt="..." />
-                                        <h5 className="fw-bolder">Malvina Cilla</h5>
-                                        <div className="fst-italic text-muted">CTO</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                            <Row className="gx-5 row-cols-1 row-cols-sm-2 row-cols-xl-4 justify-content-center">
+                               { componentsTeam }
+                            </Row>
+                        </Container>
                     </section>
                 </PageLayout.Content>
             </PageLayout>

@@ -1,5 +1,8 @@
 import Services from '@/Components/Services';
+import TitlePage from '@/Components/TitlePage';
 import PageLayout from '@/Layouts/PageLayout';
+import { useEffect, useRef, useState } from 'react';
+import { InputGroup, Row } from 'react-bootstrap';
 
 /**
  * @const {Array} 
@@ -15,10 +18,10 @@ const services = [
 
 /**
  * @const {Array<JSX.Element>} 
- * Components Servicies
+ * Components Servicies avaible
  */
 const servicesComponent = services.map((service, index) => {
-  return <Services key={ index }  icon={ service.icon } title={ service.title } text= { service.text }/>
+  return <Services key={ index }  icon={ service.icon } title={ service.title } text={ service.text }/>
 });
 
 /**
@@ -26,15 +29,14 @@ const servicesComponent = services.map((service, index) => {
  * @return {JSX.Element}
  */
 export default function Index() {
+    /*<a className="btn btn-primary btn-lg" href={ route('contact-us') }>Contactame</a>*/
+    
     return (
         <>
             <PageLayout title_page="Bienvenido">
                 <PageLayout.Title>
-                    <h1 className="display-5 fw-bold">¡Bienvenido!</h1>
-                    <p className="fs-4">
-                        Desarrollo de software profesional a la medida de tu organización o empresa
-                    </p>
-                    <a className="btn btn-primary btn-lg" href={ route('contact-us') }>Contactame</a>
+                    <TitlePage title = {'¡Bienvenido!'} description = { 'Desarrollo de software profesional a la medida de tu organización o empresa' }/>
+                    <a className="btn btn-primary" href={ route('contact-us') }>Contactame</a>                                     
                 </PageLayout.Title>
                 <PageLayout.Content>
                     { servicesComponent }
@@ -43,3 +45,4 @@ export default function Index() {
         </>
     );
 }
+  
